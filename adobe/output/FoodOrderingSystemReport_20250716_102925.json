@@ -1,0 +1,532 @@
+{
+  "source_pdf": "FoodOrderingSystemReport.pdf",
+  "processed_at": "2025-07-16T10:29:25.252229",
+  "title": "Food Ordering System",
+  "outline": [
+    {
+      "level": "H2",
+      "text": "Food Ordering System",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "A Report Submitted",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "In Partial Fulfillment",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "COMPUTER SCIENCE AND ENGINEERING",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Ashutosh Shukla (2201330100076)",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Ayush Pratap Singh (2201330100079)",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Sanyam Singh Parihar (2201330100235)",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "DECLARATION",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "Ashutosh Shukla, Ayush Pratap Singh, Sanyam Singh Parihar",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "Roll Number:",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "(Candidate Signature)",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "CERTIFICATE",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Signature Signature",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Mr. Ibrar Dr. Kumud Saxena",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "CSE CSE",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "ACKNOWLEDGEMENT",
+      "page": 4
+    },
+    {
+      "level": "H1",
+      "text": "ABSTRACT",
+      "page": 5
+    },
+    {
+      "level": "H1",
+      "text": "TABLE OF CONTENTS",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 1: INTRODUCTION 2-3",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "1.1 INTRODUCTION",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "1.1.1 ORGANIZATION OVERVIEW",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "1.2 OBJECTIVE AND SCOPE",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 2: LITERATURE REVIEW 4",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "2.1 EXISTINGS SYSTEMS OVERVIEW",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "2.2 ACADEMIC GAP AND NEED FOR SIMPLIFIED",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "SYSTEMS",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 3: REQUIREMENTS 5-7",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "3.1 FUNCTIONAL REQUIREMENTS",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "3.2 NON FUNCTIONAL REQUIREMENTS",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "3.3 SOFTWARE REQUIREMENTS",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "3.4 HARDWARE REQUIREMENTS",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 4: IMPLEMENTATION & TESTING 8-9",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "4.1 SYSTEM IMPLEMENTATION",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "4.2 TESTING",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 5: CONCLUSION AND FUTURE WORK 10",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "5.1 CONCLUSION",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "5.2 FUTURE WORKS",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "REFERENCES AND APPENDICES 11-12",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 1",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "INTRODUCTION:",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "1.1 ORGANIZATION OVERVIEW",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "1.2 Objective and Scope",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "Objectives:",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 2",
+      "page": 9
+    },
+    {
+      "level": "H1",
+      "text": "LITERATURE REVIEW:",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "2.1 Existing Systems Overview",
+      "page": 9
+    },
+    {
+      "level": "H2",
+      "text": "2.2 Academic Gap and Need for Simplified Systems",
+      "page": 9
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 3",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "REQUIREMENT:",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "3.1 Functional Requirements",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "1. User Interface for Customers",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "2. Administrator Panel",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "3. Order Management",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "4. Menu Management",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "5. Navigation and Flow",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "3.2 Non-Functional Requirements",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "• Performance",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "• Scalability",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "• Usability",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "• Security",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "• Portability",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "3.3 Software Requirements",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Software Component Version/Tool",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Web Server Apache Tomcat 11",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "3.4 Hardware Requirements",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Component Minimum Specification",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "RAM 4 GB",
+      "page": 12
+    },
+    {
+      "level": "H2",
+      "text": "Network Localhost/127.0.0.1",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 4",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "IMPLEMENTATION & TESTING:",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "4.1 System Implementation",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "A. User Module",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "• Functionality:",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "• Pages Involved:",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "B. Admin Module",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "• Functionality:",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "• Pages Involved:",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "C. Database Configuration",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "• Tables Used:",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "• Connection:",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "D. Deployment",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "• Server: Apache Tomcat 11",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "4.2 Testing",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "A. Unit Testing",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "B. Integration Testing",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "• Test Cases:",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "C. Validation Testing",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "Test Case Description Expected Result Status",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "D. Performance Testing",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 5",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "CONCLUSION AND FUTURE WORK:",
+      "page": 15
+    },
+    {
+      "level": "H2",
+      "text": "5.1 Conclusion",
+      "page": 15
+    },
+    {
+      "level": "H2",
+      "text": "5.2 Future Work",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "1. Authentication Module",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "2. Shopping Cart Feature",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "3. Payment Gateway Integration",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "4. Order Tracking",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "5. Responsive Design",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "6. Deployment on Cloud",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "REFERENCES",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "[6] Apache Software Foundation, “Apache Tomcat 11 Documentation,” [Online]. Available:",
+      "page": 16
+    },
+    {
+      "level": "H1",
+      "text": "APPENDICES",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "Appendix A: Database Schema",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "Field Data Type Description",
+      "page": 17
+    },
+    {
+      "level": "H2",
+      "text": "Field Data Type Description",
+      "page": 17
+    }
+  ]
+}

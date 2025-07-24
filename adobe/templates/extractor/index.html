@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Outline Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .upload-form {
+            margin-bottom: 30px;
+        }
+        .file-input {
+            padding: 10px;
+            border: 2px dashed #ddd;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        .error {
+            color: #dc3545;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .outline-item {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-left: 3px solid #007bff;
+            padding-left: 15px;
+        }
+        .outline-item.h1 {
+            border-left-color: #dc3545;
+            font-weight: bold;
+        }
+        .outline-item.h2 {
+            border-left-color: #28a745;
+            margin-left: 20px;
+        }
+        .outline-item.h3 {
+            border-left-color: #ffc107;
+            margin-left: 40px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .saved-results {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #dee2e6;
+        }
+        .saved-results h2 {
+            color: #495057;
+            margin-bottom: 20px;
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .result-card {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .result-card h3 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .result-card p {
+            margin: 5px 0;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .download-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Outline Extractor</h1>
+        <p>Upload a PDF file (up to 50 pages) to extract its title and headings (H1, H2, H3) in JSON format.</p>
+        
+        <form id="uploadForm" class="upload-form" enctype="multipart/form-data">
+            <div class="file-input">
+                <input type="file" id="pdfFile" name="pdf_file" accept=".pdf" required>
+            </div>
+            <button type="submit" id="submitBtn">Extract Outline</button>
+        </form>
+        
+        <div id="result" class="result" style="display: none;"></div>
+        
+        <!-- Saved Results Section -->
+        {% if saved_results %}
+        <div class="saved-results">
+            <h2>Previously Processed PDFs</h2>
+            <div class="results-grid">
+                {% for result in saved_results %}
+                <div class="result-card">
+                    <h3>{{ result.title|default:"Untitled Document" }}</h3>
+                    <p><strong>Source:</strong> {{ result.source_pdf }}</p>
+                    <p><strong>Processed:</strong> {{ result.processed_at }}</p>
+                    <p><strong>Headings:</strong> {{ result.headings_count }}</p>
+                    <button onclick="downloadResult('{{ result.filename }}')" class="download-btn">
+                        Download JSON
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const fileInput = document.getElementById('pdfFile');
+            const submitBtn = document.getElementById('submitBtn');
+            const resultDiv = document.getElementById('result');
+            
+            if (!fileInput.files.length) {
+                showError('Please select a PDF file');
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            
+            // Validate file type
+            if (!file.name.toLowerCase().endsWith('.pdf')) {
+                showError('Please select a valid PDF file');
+                return;
+            }
+            
+            // Validate file size (50MB)
+            if (file.size > 50 * 1024 * 1024) {
+                showError('File size exceeds 50MB limit');
+                return;
+            }
+            
+            // Show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing...';
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Extracting outline from PDF...</p>
+                </div>
+            `;
+            
+            try {
+                const formData = new FormData();
+                formData.append('pdf_file', file);
+                
+                const response = await fetch('/extract/', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showSuccess(data);
+                } else {
+                    showError(data.error || 'An error occurred');
+                }
+            } catch (error) {
+                showError('Network error: ' + error.message);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Extract Outline';
+            }
+        });
+        
+        function showError(message) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result error';
+            resultDiv.innerHTML = `<strong>Error:</strong> ${message}`;
+        }
+        
+        function showSuccess(data) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result success';
+            
+            let html = `<h3>Extraction Complete!</h3>`;
+            
+            if (data.title) {
+                html += `<p><strong>Title:</strong> ${data.title}</p>`;
+            }
+            
+            if (data.saved_to) {
+                html += `<p><strong>Results saved to:</strong> ${data.saved_to}</p>`;
+            }
+            
+            if (data.outline && data.outline.length > 0) {
+                html += `<h4>Outline (${data.outline.length} headings found):</h4>`;
+                data.outline.forEach(item => {
+                    html += `
+                        <div class="outline-item ${item.level.toLowerCase()}">
+                            <strong>${item.level}:</strong> ${item.text} <em>(Page ${item.page})</em>
+                        </div>
+                    `;
+                });
+            } else {
+                html += `<p>No headings found in the document.</p>`;
+            }
+            
+            // Remove saved_to from JSON display
+            const displayData = {...data};
+            delete displayData.saved_to;
+            
+            html += `
+                <h4>JSON Output:</h4>
+                <pre>${JSON.stringify(displayData, null, 2)}</pre>
+            `;
+            
+            resultDiv.innerHTML = html;
+            
+            // Refresh the page after 3 seconds to show the new result in saved results
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        }
+        
+        function downloadResult(filename) {
+            fetch(`/download/${filename}/`)
+                .then(response => response.json())
+                .then(data => {
+                    // Create download link
+                    const blob = new Blob([JSON.stringify(data, null, 2)], {
+                        type: 'application/json'
+                    });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                })
+                .catch(error => {
+                    alert('Error downloading file: ' + error.message);
+                });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+{
+  "source_pdf": "Report Mini project prev.pdf",
+  "processed_at": "2025-07-16T09:36:59.481791",
+  "title": "MULTIMODAL LANGUAGE TRANSLATOR",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "MULTIMODAL LANGUAGE TRANSLATOR",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "TOOL",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "A Mini Project Report Submitted",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "COMPUTER SCIENCE & ENGINEERING",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "ASHUTOSH SHUKLA (2201330100076)",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "AYUSH PRATAP SINGH (2201330100079)",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "SANYAM SINGH PARIHAR (2201330100235)",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "VINEET CHAUDHARY (2201330100285)",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "NOIDA INSTITUTE OF ENGINEERING ANDTECHNOLOGY",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "DR. A.P.J ABDUL KALAM TECHNICAL UNIVERSITY , LUCKNOW",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "MAY,2024",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "DECLARATION",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "“Roll Number” : 2201330100076.",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "“Roll Number” : 2201330100079.",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "PARIHAR”",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "“Roll Number” : 2201330100235.",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "CHAUDHARY”",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "”Roll Number” : 2201330100285.",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "CERTIFICATE",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "(2201330100079), SANYAM PARIHAR SINGH (2201330100235), VINEET CHAUDHARY",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Signature Signature",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "ACKNOWLEDGEMENTS",
+      "page": 4
+    },
+    {
+      "level": "H1",
+      "text": "ABSTRACT",
+      "page": 5
+    },
+    {
+      "level": "H1",
+      "text": "TABLE OF CONTENTS",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 1: INTRODUCTION",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 2: LITERATURE",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "REVIEW",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 3: REQUIREMENTS AND ANALYSIS",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 4: PROPOSED METHODOLOGY",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 5: RESULTS",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "CHAPTER 6: CONCLUSIONREFERENCE",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "INTRODUCTION",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "EXISTING SYSTEMS",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "functionalities and catering to diverse user needs. Here's an overview of some",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "PROBLEM STATEMENT",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "1. Introduction",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "This section of the report delves into existing research on language translation tools",
+      "page": 11
+    },
+    {
+      "level": "H1",
+      "text": "2. Machine Translation and Accuracy",
+      "page": 11
+    },
+    {
+      "level": "H1",
+      "text": "1. Speech Recognition Integration",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "2. User Interface Design and Usability",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "3. Offline Translation Capabilities",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "4. Conclusion",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "REQUIREMENT AND ANALYSIS",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "This section outlines the functional and non-functional requirements for our language",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "1. Functional Requirements",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "● User Interface:",
+      "page": 13
+    },
+    {
+      "level": "H2",
+      "text": "● Translation Functionality:",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "2. Non-Functional Requirements",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "3. Requirements Analysis",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "Feasibility:",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "Challenges:",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "4. Conclusion",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "PROPOSED METHODOLOGY",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "This section outlines the development methodology for our language translator tool,",
+      "page": 16
+    },
+    {
+      "level": "H1",
+      "text": "1. Technology Stack",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "● Additional Libraries:",
+      "page": 16
+    },
+    {
+      "level": "H1",
+      "text": "2. System Architecture",
+      "page": 16
+    },
+    {
+      "level": "H1",
+      "text": "3. Development Process",
+      "page": 16
+    },
+    {
+      "level": "H1",
+      "text": "1. Planning and Design: Define detailed user stories, system workflows, and",
+      "page": 16
+    },
+    {
+      "level": "H1",
+      "text": "2. Backend Development: Develop the Flask application logic for handling user",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "3. Frontend Development: Construct the user interface using HTML, CSS, and",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "4. Integration and Testing: Integrate the backend and frontend components,",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "5. Deployment: Deploy the completed tool to a web server for user access.",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "6. (Optional) Offline Functionality: Explore and implement offline translation",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "4. Advantages of the Proposed Methodology",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "CONCLUSION",
+      "page": 21
+    },
+    {
+      "level": "H2",
+      "text": "Key Strengths:",
+      "page": 21
+    },
+    {
+      "level": "H2",
+      "text": "Future Enhancements:",
+      "page": 21
+    },
+    {
+      "level": "H2",
+      "text": "Overall Impact:",
+      "page": 22
+    },
+    {
+      "level": "H2",
+      "text": "Looking Forward:",
+      "page": 23
+    },
+    {
+      "level": "H1",
+      "text": "REFERENCES",
+      "page": 24
+    },
+    {
+      "level": "H2",
+      "text": "Tübingen: Max Niemeyer.",
+      "page": 24
+    },
+    {
+      "level": "H2",
+      "text": "Cambridge: Cambridge University Press.",
+      "page": 24
+    },
+    {
+      "level": "H2",
+      "text": "Human-Computer Communication. Semiotica, 169. 45-70.",
+      "page": 24
+    },
+    {
+      "level": "H2",
+      "text": "Amsterdam: John Benjamins. 103- 120.",
+      "page": 24
+    },
+    {
+      "level": "H2",
+      "text": "Königstein/Taunus: Scriptor.",
+      "page": 24
+    },
+    {
+      "level": "H2",
+      "text": "10- Goodwin, C. and A. Duranti. 1992. Rethinking Context: An Introduction. In: A.",
+      "page": 24
+    },
+    {
+      "level": "H2",
+      "text": "Phenomenon. Cambridge: Cambridge University Press. 1-42",
+      "page": 24
+    },
+    {
+      "level": "H2",
+      "text": "11 Pramudita, Y. D., Putro, S. S., Wahyudi, R. N., Suzanti, I. O., & Solihin, F. (2020).",
+      "page": 24
+    }
+  ]
+}
